@@ -1,13 +1,13 @@
-let randomNumber =
+let computerInput =
      Math.floor(Math.random() * 3 + 1);
    console.log('Wylosowana liczba to: '
-   + randomNumber); 
+   + computerInput); 
 let computerMove = 'nieznany ruch';
-if(randomNumber == 1) { 
+if(computerInput == 1) { 
     computerMove = 'kamień';
-} else if(randomNumber == 2) {
+} else if(computerInput == 2) {
     computerMove = 'papier';
-} else if(randomNumber == 3) {
+} else if(computerInput == 3) {
     computerMove = 'nozyce';
 }
    printMessage('Mój ruch to: ' +
@@ -25,3 +25,21 @@ if(randomNumber == 1) {
    }
    printMessage('Twój ruch to: ' +
    playerMove);
+
+   if(computerInput == '1' && playerInput == '2') {
+    printMessage('Ty wygrywasz')
+    } else if(computerInput == '2' && playerInput == '1') {
+    printMessage('Komputer wygrywa')
+    } else if(computerInput == '3' && playerInput == '1') {
+    printMessage('Ty wygrywasz')
+    } else if(computerInput == '1' && playerInput == '3') {
+    printMessage('Komputer wygrywa')
+    } else if(computerInput == '2' && playerInput == '3') {
+    printMessage('Ty wygrywasz')
+    } else if(computerInput == '3' && playerInput == '2') {
+    printMessage('Komputer wygrywa')
+    } else if(computerInput == playerInput) {
+    printMessage('Remis')
+    } else if(playerMove == 'nieznany ruch') {
+    printMessage ('Nieprawidlowy ruch')
+    }
