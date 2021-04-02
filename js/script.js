@@ -1,15 +1,15 @@
-let computerInput =
+let randomNumber =
      Math.floor(Math.random() * 3 + 1);
    console.log('Wylosowana liczba to: '
-   + computerInput); 
-let computerMove = 'nieznany ruch';
-if(computerInput == 1) { 
+   + randomNumber); 
+let computerMove = getMoveName(randomNumber);
+/*if(randomNumber == 1) { 
     computerMove = 'kamień';
-} else if(computerInput == 2) {
+ else if(randomNumber == 2) {
     computerMove = 'papier';
-} else if(computerInput == 3) {
-    computerMove = 'nozyce';
-}
+} else if(randomNumber == 3) {
+    computerMove = 'nozyce'; */
+
    printMessage('Mój ruch to: ' +
    computerMove);
 
@@ -26,19 +26,19 @@ if(computerInput == 1) {
    printMessage('Twój ruch to: ' +
    playerMove);
 
-   if(computerInput == '1' && playerInput == '2') {
+   if(randomNumber == '1' && playerInput == '2') {
     printMessage('Ty wygrywasz')
-    } else if(computerInput == '2' && playerInput == '1') {
+    } else if(randomNumber == '2' && playerInput == '1') {
     printMessage('Komputer wygrywa')
-    } else if(computerInput == '3' && playerInput == '1') {
+    } else if(randomNumber == '3' && playerInput == '1') {
     printMessage('Ty wygrywasz')
-    } else if(computerInput == '1' && playerInput == '3') {
+    } else if(randomNumber == '1' && playerInput == '3') {
     printMessage('Komputer wygrywa')
-    } else if(computerInput == '2' && playerInput == '3') {
+    } else if(randomNumber == '2' && playerInput == '3') {
     printMessage('Ty wygrywasz')
-    } else if(computerInput == '3' && playerInput == '2') {
+    } else if(randomNumber == '3' && playerInput == '2') {
     printMessage('Komputer wygrywa')
-    } else if(computerInput == playerInput) {
+    } else if(randomNumber == playerInput) {
     printMessage('Remis')
     } else if(playerMove == 'nieznany ruch') {
     printMessage ('Nieprawidlowy ruch')
