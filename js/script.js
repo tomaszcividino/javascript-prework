@@ -1,12 +1,13 @@
-function playGame(playerInput) {
+{ 
+    function playGame(playerInput) {
 clearMessages();
 
-let randomNumber =
+const randomNumber =
      Math.floor(Math.random() * 3 + 1);
    console.log('Wylosowana liczba to: '
    + randomNumber); 
-let computerMove = getMoveName(randomNumber);
-let playerMove = getMoveName(playerInput);
+const computerMove = getMoveName(randomNumber);
+const playerMove = getMoveName(playerInput);
 
 function getMoveName(numberofmove) {
 if(numberofmove == 1) { 
@@ -62,3 +63,4 @@ document.getElementById('play-paper').addEventListener('click',function () {
         printMessage('Twoj ruch to papier')
         playGame('2')
         })
+}
