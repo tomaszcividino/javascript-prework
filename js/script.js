@@ -1,29 +1,28 @@
 { 
-    function playGame(playerInput) {
+    const playGame = function(playerInput) {
 clearMessages();
 
 const randomNumber =
      Math.floor(Math.random() * 3 + 1);
    console.log('Wylosowana liczba to: '
    + randomNumber); 
+   const getMoveName = function(numberOfMove) {
+    if(numberOfMove == 1) { 
+        return 'kamień';
+    } else if(numberOfMove == 2) {
+        return 'papier';
+    } else if(numberOfMove == 3) {
+        return 'nożyce';
+    } else {
+        return 'nieznany ruch';
+    }
+    }
+
 const computerMove = getMoveName(randomNumber);
 const playerMove = getMoveName(playerInput);
 
-function getMoveName(numberofmove) {
-if(numberofmove == 1) { 
-    return 'kamień';
-} else if(numberofmove == 2) {
-    return 'papier';
-} else if(numberofmove == 3) {
-    return 'nożyce';
-} else {
-    return 'nieznany ruch';
-}
-}
 
-   DisplayResult(computerMove,playerMove)
-
-function DisplayResult(argComputerMove,argPlayerMove) {
+const displayResult = function(argComputerMove,argPlayerMove){
    printMessage('Mój ruch to: ' +
    argComputerMove);
 printMessage('Twoj ruch to: ' +
@@ -47,7 +46,8 @@ printMessage('Twoj ruch to: ' +
     printMessage ('Nieprawidlowy ruch')
     }
 }
-}
+displayResult(computerMove,playerMove)
+    }
 
 document.getElementById('play-scissors').addEventListener('click',function () {
 printMessage('Twoj ruch to nożyce')
